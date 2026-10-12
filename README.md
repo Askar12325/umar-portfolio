@@ -1,85 +1,67 @@
-# Umar Abubakar — Software Engineer Portfolio
+# Umar Abubakar Portfolio
 
-A personal portfolio website for **Umar Abubakar** (Software Engineer — Frontend, Systems & Interactive Experiences).
+Production portfolio platform built with React, TypeScript, Tailwind CSS, and Three.js.
 
-Live Demo: Available locally or via deployment on Vercel / GitHub Pages.
+## Overview
 
----
+A responsive personal portfolio presenting systems engineering, frontend architecture, and interactive 3D web applications.
 
-## ⚡ Tech Stack
+## Technical Architecture
 
-- **Framework**: React 19 + TypeScript
-- **Bundler**: Vite 8
-- **Styling**: Tailwind CSS v4
-- **3D & Graphics**: Three.js & React Three Fiber (`@react-three/fiber`, `@react-three/drei`)
-- **Animations**: Framer Motion
-- **Icons**: Lucide React & Vector SVGs
-- **Form Handling**: Formspree API
+Application Framework
+React 19 with Vite for compilation and module serving. Strict TypeScript is enforced throughout all components.
 
----
+Interface Styling
+Tailwind CSS v4 utilizing design tokens, dark luxury aesthetic, and native CSS variables for typography and layout bounds.
 
-## 🚀 Key Features
+3D Graphics Engine
+Hardware accelerated kinetic lattice built with Three.js and React Three Fiber. Incorporates refractive geometries, dynamic lighting, and low-overhead mobile downscaling.
 
-1. **Hero Section**:
-   - High-contrast typography & personal brand positioning
-   - Large circular executive portrait frame with ambient backlight
-   - Subtle 3D kinetic wireframe lattice and gyro rings
-   - Direct social integration (LinkedIn, GitHub, X)
+Motion System
+Physics-based transitions and infinite horizontal marquee animations implemented with Framer Motion.
 
-2. **About Section**:
-   - Executive engineering narrative
-   - 3 core specialization pillars (Frontend & UI Craft, Systems & Backend, Interactive & 3D Web)
-   - Real-time mobility & relocation status
+Communications
+Direct contact messaging powered by Formspree with client-side validation, loading feedback, and delivery confirmations.
 
-3. **Featured Projects**:
-   - **NexusLLM Gateway** (Go distributed routing gateway with sub-ms semantic caching)
-   - **ApexTrade Terminal** (Crypto spot & perpetual trading terminal with real-time WebSocket orderbook)
-   - **AURA Spatial Headset** (Photorealistic WebGL 3D hardware showcase with dynamic acoustic modes)
+## Featured Projects
 
-4. **Tech Stack Section**:
-   - Infinite horizontal scrolling marquee using Framer Motion
-   - Alternating dual-row flow with edge gradient masks
+NexusLLM Gateway
+High throughput distributed LLM gateway engineered in Go with sub-millisecond semantic caching and automated multi-provider fallback orchestration.
+Live deployment: https://nexus-llm-production-857d.up.railway.app
+Source repository: https://github.com/Askar12325
 
-5. **Contact Section**:
-   - Functional contact form integrated with Formspree
-   - Loading spinners, error recovery, and success confirmation screen
+ApexTrade Terminal
+Cryptocurrency trading interface integrating high-frequency WebSocket streams, real-time orderbook depth visualization, and responsive market charts.
+Live deployment: https://apextrade-mwrg.onrender.com
+Source repository: https://github.com/Askar12325
 
-6. **Full Responsiveness**:
-   - Custom mobile navigation drawer
-   - Touch targets $\ge 44\text{px}$
-   - Fluid typography and zero horizontal scroll on viewports from 375px to 4K
+AURA Spatial Headset
+Interactive 3D product showcase for next-generation spatial audio hardware featuring real-time WebGL rendering, exploded assembly animations, and acoustic mode simulation.
+Live deployment: https://aura-headset-gamma.vercel.app/
+Source repository: https://github.com/Askar12325/aura-spatial
 
----
+## Development Setup
 
-## 🛠️ Local Development
-
-### 1. Install Dependencies
+Install dependencies:
 ```bash
 npm install
 ```
 
-### 2. Start Dev Server
+Start development server:
 ```bash
 npm run dev
 ```
 
-### 3. Production Build
+Build for production:
 ```bash
 npm run build
 ```
 
----
+## Production Deployment
 
-## 🌐 Deployment to GitHub / Vercel
-
-1. Create a new repository on GitHub: `https://github.com/new` (e.g. named `portfolio` or `umar-portfolio`).
-2. Push this project to your repository:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: complete senior portfolio for Umar Abubakar"
-   git branch -M main
-   git remote add origin https://github.com/Askar12325/<YOUR_REPO_NAME>.git
-   git push -u origin main
-   ```
-3. Import the repository on [Vercel](https://vercel.com) or [Netlify](https://netlify.com) for instant global edge deployment with zero configuration.
+Commit updates:
+```bash
+git add .
+git commit -m "Update portfolio documentation"
+git push origin main
+```
