@@ -28,8 +28,8 @@ const projects: Project[] = [
       'High-throughput distributed LLM gateway engineered in Go. Features sub-millisecond semantic caching, token bucket rate limiting, and automated multi-provider fallback orchestration across OpenAI, Anthropic, and local models.',
     metrics: '<0.8ms Overhead · 99.99% Uptime',
     tags: ['Go', 'Distributed Systems', 'Redis', 'Docker', 'Rate Limiting', 'gRPC'],
-    liveUrl: 'https://nexus-llm-production-857d.up.railway.app',
-    githubUrl: 'https://github.com/Askar12325',
+    liveUrl: 'https://nexus-llm.onrender.com/',
+    githubUrl: 'https://github.com/Askar12325/Nexus-LLM',
     theme: {
       accent: 'text-indigo-400',
       glow: 'from-indigo-500/10 via-purple-500/5 to-transparent',
@@ -46,7 +46,7 @@ const projects: Project[] = [
     metrics: '50ms Orderbook Feed · 60 FPS Canvas',
     tags: ['React', 'TypeScript', 'WebSockets', 'Tailwind CSS', 'State Machines', 'Canvas'],
     liveUrl: 'https://apextrade-mwrg.onrender.com',
-    githubUrl: 'https://github.com/Askar12325',
+    githubUrl: 'https://github.com/Askar12325/Apextrade',
     theme: {
       accent: 'text-emerald-400',
       glow: 'from-emerald-500/10 via-cyan-500/5 to-transparent',

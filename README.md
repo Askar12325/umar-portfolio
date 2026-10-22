@@ -27,13 +27,13 @@ Direct contact messaging powered by Formspree with client-side validation, loadi
 
 NexusLLM Gateway
 High throughput distributed LLM gateway engineered in Go with sub-millisecond semantic caching and automated multi-provider fallback orchestration.
-Live deployment: https://nexus-llm-production-857d.up.railway.app
-Source repository: https://github.com/Askar12325
+Live deployment: https://nexus-llm.onrender.com/
+Source repository: https://github.com/Askar12325/Nexus-LLM
 
 ApexTrade Terminal
 Cryptocurrency trading interface integrating high-frequency WebSocket streams, real-time orderbook depth visualization, and responsive market charts.
 Live deployment: https://apextrade-mwrg.onrender.com
-Source repository: https://github.com/Askar12325
+Source repository: https://github.com/Askar12325/Apextrade
 
 AURA Spatial Headset
 Interactive 3D product showcase for next-generation spatial audio hardware featuring real-time WebGL rendering, exploded assembly animations, and acoustic mode simulation.
