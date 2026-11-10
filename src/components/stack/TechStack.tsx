@@ -12,6 +12,8 @@ import {
   Globe,
   Terminal,
   Activity,
+  Bot,
+  Binary,
 } from 'lucide-react'
 
 interface TechItem {
@@ -22,23 +24,25 @@ interface TechItem {
 }
 
 const row1: TechItem[] = [
+  { name: 'Python', category: 'AI & Data Processing', icon: Binary, color: 'text-amber-400 border-amber-500/20 bg-amber-500/10' },
+  { name: 'FastAPI', category: 'High-Performance APIs', icon: Zap, color: 'text-teal-400 border-teal-500/20 bg-teal-500/10' },
+  { name: 'Next.js 15', category: 'App Router & SSR', icon: Code2, color: 'text-neutral-200 border-white/20 bg-white/10' },
   { name: 'Go (Golang)', category: 'High-Throughput Systems', icon: Terminal, color: 'text-cyan-400 border-cyan-500/20 bg-cyan-500/10' },
   { name: 'React', category: 'Reactive UI Architecture', icon: Code2, color: 'text-sky-400 border-sky-500/20 bg-sky-500/10' },
   { name: 'TypeScript', category: 'Strict Type Systems', icon: Layers, color: 'text-blue-400 border-blue-500/20 bg-blue-500/10' },
   { name: 'Three.js & R3F', category: '3D & WebGL Graphics', icon: Sparkles, color: 'text-emerald-400 border-emerald-500/20 bg-emerald-500/10' },
   { name: 'Distributed Systems', category: 'Routing & Failover', icon: Cpu, color: 'text-indigo-400 border-indigo-500/20 bg-indigo-500/10' },
-  { name: 'WebSockets', category: 'Real-Time Streaming', icon: Radio, color: 'text-amber-400 border-amber-500/20 bg-amber-500/10' },
-  { name: 'Docker', category: 'Containerization', icon: Box, color: 'text-blue-400 border-blue-500/20 bg-blue-500/10' },
 ]
 
 const row2: TechItem[] = [
-  { name: 'Node.js', category: 'Asynchronous Services', icon: Server, color: 'text-emerald-400 border-emerald-500/20 bg-emerald-500/10' },
+  { name: 'Vision-Language AI', category: 'Meta Muse & Multimodal VLMs', icon: Bot, color: 'text-violet-400 border-violet-500/20 bg-violet-500/10' },
+  { name: 'WebSockets', category: 'Real-Time Streaming', icon: Radio, color: 'text-amber-400 border-amber-500/20 bg-amber-500/10' },
   { name: 'Tailwind CSS', category: 'Responsive Design Tokens', icon: Zap, color: 'text-cyan-400 border-cyan-500/20 bg-cyan-500/10' },
+  { name: 'Docker', category: 'Containerization', icon: Box, color: 'text-blue-400 border-blue-500/20 bg-blue-500/10' },
+  { name: 'Node.js', category: 'Asynchronous Services', icon: Server, color: 'text-emerald-400 border-emerald-500/20 bg-emerald-500/10' },
   { name: 'Framer Motion', category: 'Physics & Orchestration', icon: Activity, color: 'text-purple-400 border-purple-500/20 bg-purple-500/10' },
   { name: 'Redis', category: 'Semantic In-Memory Cache', icon: Database, color: 'text-rose-400 border-rose-500/20 bg-rose-500/10' },
-  { name: 'PostgreSQL', category: 'Relational Data Modeling', icon: Database, color: 'text-indigo-400 border-indigo-500/20 bg-indigo-500/10' },
   { name: 'gRPC & Protobuf', category: 'Low-Latency RPC', icon: Globe, color: 'text-teal-400 border-teal-500/20 bg-teal-500/10' },
-  { name: 'Next.js', category: 'Full-Stack Performance', icon: Code2, color: 'text-neutral-200 border-white/20 bg-white/10' },
 ]
 
 export const TechStack = () => {

@@ -53,7 +53,7 @@ export const About = () => {
               I am a software engineer dedicated to building software where mechanical systems reliability meets high-precision interface design.
             </p>
             <p className="text-neutral-400">
-              My work spans from designing low-latency routing gateways and WebSocket market data streams in Go to building institutional-grade trading terminals and interactive 3D product experiences in React, TypeScript, and Three.js.
+              My work spans from designing low-latency routing gateways and WebSocket market data streams in Go to building multimodal vision-language AI assistants with Next.js and FastAPI, high-throughput trading terminals, and interactive 3D product experiences in React, TypeScript, and Three.js.
             </p>
             <p className="text-neutral-400">
               I care deeply about software fundamentals: clean API contracts, predictable state machines, fast bundle execution, and interfaces that feel effortless to touch and use on any screen size.

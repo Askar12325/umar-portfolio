@@ -25,6 +25,11 @@ Direct contact messaging powered by Formspree with client-side validation, loadi
 
 ## Featured Projects
 
+ChopSnap
+AI-powered multimodal kitchen assistant engineered for Nigerian households. Features photo and voice ingredient capture, instant ingredient validation, and budget-aware recipe synthesis using Meta Muse Spark Open and FastAPI.
+Live deployment: https://chop-snap-ro2x.vercel.app/
+Source repository: https://github.com/Askar12325/ChopSnap
+
 NexusLLM Gateway
 High throughput distributed LLM gateway engineered in Go with sub-millisecond semantic caching and automated multi-provider fallback orchestration.
 Live deployment: https://nexus-llm.onrender.com/

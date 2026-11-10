@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, Terminal, Activity, Headphones } from 'lucide-react'
+import { ExternalLink, Terminal, Activity, Headphones, UtensilsCrossed } from 'lucide-react'
 import { GithubIcon } from '../ui/Icons'
 
 interface Project {
@@ -20,6 +20,23 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 'chopsnap',
+    title: 'ChopSnap',
+    category: 'MULTIMODAL AI & VISION-LANGUAGE',
+    description:
+      'AI kitchen assistant tackling domestic food waste. Captures ingredients via photo or voice, validates provisions with instant user correction, and synthesizes Nigerian recipes across quick-cook vs formal meal tiers and budget thresholds.',
+    metrics: 'Meta AI Hackathon 2026 · Sub-2s Synthesis',
+    tags: ['Next.js 15', 'FastAPI', 'Python', 'Meta Muse Spark Open', 'VLM', 'Tailwind CSS'],
+    liveUrl: 'https://chop-snap-ro2x.vercel.app/',
+    githubUrl: 'https://github.com/Askar12325/ChopSnap',
+    theme: {
+      accent: 'text-amber-400',
+      glow: 'from-amber-500/10 via-orange-500/5 to-transparent',
+      border: 'hover:border-amber-500/40',
+      badgeBg: 'bg-amber-500/10 text-amber-300 border-amber-500/20',
+    },
+  },
   {
     id: 'nexusllm',
     title: 'NexusLLM Gateway',
@@ -92,12 +109,12 @@ export const Projects = () => {
             Featured Projects
           </h2>
           <p className="mt-3 text-sm sm:text-base text-neutral-400 max-w-xl font-light">
-            A curated selection of high-performance systems, trading interfaces, and creative 3D engineering.
+            A curated selection of multimodal AI systems, high-throughput distributed infrastructure, trading interfaces, and creative 3D engineering.
           </p>
         </div>
 
-        {/* Project Cards Stack */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Project Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, idx) => (
             <motion.article
               key={project.id}
@@ -105,9 +122,7 @@ export const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className={`group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-white/[0.08] ${project.theme.border} bg-[#0b0d12]/90 backdrop-blur-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 overflow-hidden ${
-                idx === 2 ? 'md:col-span-2 lg:col-span-1' : ''
-              }`}
+              className={`group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-white/[0.08] ${project.theme.border} bg-[#0b0d12]/90 backdrop-blur-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 overflow-hidden`}
             >
               {/* Inner ambient card glow */}
               <div
@@ -124,6 +139,7 @@ export const Projects = () => {
                   </span>
 
                   <div className="w-9 h-9 rounded-xl border border-white/10 bg-white/[0.03] flex items-center justify-center text-neutral-400 group-hover:text-white group-hover:border-white/20 transition-colors">
+                    {project.id === 'chopsnap' && <UtensilsCrossed className="w-4 h-4 text-amber-400" />}
                     {project.id === 'nexusllm' && <Terminal className="w-4 h-4 text-indigo-400" />}
                     {project.id === 'apextrade' && <Activity className="w-4 h-4 text-emerald-400" />}
                     {project.id === 'aura' && <Headphones className="w-4 h-4 text-cyan-400" />}
