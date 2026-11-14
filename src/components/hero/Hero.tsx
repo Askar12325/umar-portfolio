@@ -2,13 +2,12 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Mail } from 'lucide-react'
 import { GithubIcon, LinkedinIcon, XIcon } from '../ui/Icons'
 import { Button } from '../ui/Button'
-import { Avatar } from '../ui/Avatar'
 import { HeroScene } from './HeroScene'
 
 export const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center pt-28 sm:pt-32 pb-20 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden bg-grid-pattern">
-      {/* Secondary 3D Kinetic Canvas Backdrop */}
+      {/* 3D Kinetic Kinetic Diamond / Orbital Canvas Backdrop */}
       <HeroScene />
 
       {/* Atmospheric ambient lighting */}
@@ -16,17 +15,18 @@ export const Hero = () => {
       <div className="pointer-events-none absolute bottom-1/3 right-1/4 w-[300px] sm:w-[450px] h-[300px] sm:h-[450px] rounded-full bg-blue-600/[0.04] blur-[160px]" />
 
       <div className="relative z-10 max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-        {/* Left Column: Profile Photo, Name, Positioning, Supporting Line, CTAs & Socials */}
+        {/* Left Column: Name, Status Pill, Positioning, Supporting Line, CTAs & Socials */}
         <div className="lg:col-span-8 flex flex-col items-start text-left">
           
-          {/* Large Circular Profile Photo */}
+          {/* Engineering Badge Pill */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-8"
+            className="mb-6 inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 font-mono text-xs tracking-wider uppercase backdrop-blur-md"
           >
-            <Avatar size="2xl" alt="Umar Abubakar" />
+            <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee] animate-pulse" />
+            <span>Systems & Frontend Architect</span>
           </motion.div>
 
           {/* Name Display */}
@@ -124,8 +124,8 @@ export const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Right Column: 3D Framing Buffer (Sculpture renders subtly here) */}
-        <div className="lg:col-span-4 relative hidden lg:flex items-center justify-center min-h-[360px] pointer-events-none" />
+        {/* Right Column: 3D Kinetic Framing Canvas Area */}
+        <div className="lg:col-span-4 relative flex items-center justify-center min-h-[280px] lg:min-h-[420px] pointer-events-none" />
       </div>
     </section>
   )

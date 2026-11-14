@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { Code2, Cpu, Sparkles, CheckCircle, MapPin, Globe } from 'lucide-react'
+import { Code2, Cpu, CheckCircle, MapPin, Globe, Bot } from 'lucide-react'
+import profileImg from '../../assets/profile.jpg'
 
 export const About = () => {
   const focusAreas = [
@@ -18,11 +19,11 @@ export const About = () => {
         'Engineering high-throughput Go services, concurrent pipelines, and real-time WebSocket streams. Designing resilient distributed mechanisms including semantic caching, token bucket rate limiters, and failover routing.',
     },
     {
-      title: 'Interactive & 3D Web',
-      icon: Sparkles,
+      title: 'Multimodal AI & 3D Web',
+      icon: Bot,
       accent: 'text-emerald-400 border-emerald-500/20 bg-emerald-500/10',
       description:
-        'Developing immersive WebGL and Three.js environments that run smoothly across devices. Bridging the gap between creative visual computing and reliable frontend engineering.',
+        'Developing vision-language AI architectures and immersive Three.js WebGL graphics that run at consistent 60fps across desktop and mobile browsers.',
     },
   ]
 
@@ -45,76 +46,94 @@ export const About = () => {
           </h2>
         </div>
 
-        {/* Professional Summary Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start mb-16">
-          {/* Main Statement */}
-          <div className="lg:col-span-7 space-y-5 text-neutral-300 font-sans text-sm sm:text-base leading-relaxed font-light">
-            <p className="text-lg sm:text-xl font-normal text-white leading-snug">
-              I am a software engineer dedicated to building software where mechanical systems reliability meets high-precision interface design.
-            </p>
-            <p className="text-neutral-400">
-              My work spans from designing low-latency routing gateways and WebSocket market data streams in Go to building multimodal vision-language AI assistants with Next.js and FastAPI, high-throughput trading terminals, and interactive 3D product experiences in React, TypeScript, and Three.js.
-            </p>
-            <p className="text-neutral-400">
-              I care deeply about software fundamentals: clean API contracts, predictable state machines, fast bundle execution, and interfaces that feel effortless to touch and use on any screen size.
-            </p>
-          </div>
+        {/* Senior Visual Profile & Summary Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-16">
+          
+          {/* Prominent Circular Senior Portrait */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-start">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="relative group select-none"
+            >
+              {/* Outer atmospheric aura */}
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-cyan-500/30 via-indigo-500/20 to-teal-500/30 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-700" />
+              
+              {/* Outer border & glass ring */}
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full p-2 sm:p-2.5 bg-gradient-to-b from-white/35 via-white/10 to-white/15 border border-white/20 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
+                <div className="w-full h-full rounded-full overflow-hidden bg-neutral-950 relative">
+                  <img
+                    src={profileImg}
+                    alt="Umar Abubakar"
+                    className="w-full h-full object-cover object-[center_20%] transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  {/* Subtle inner shadow overlay */}
+                  <div className="absolute inset-0 rounded-full pointer-events-none ring-1 ring-inset ring-white/20 shadow-[inset_0_0_24px_rgba(0,0,0,0.5)]" />
+                </div>
+              </div>
 
-          {/* Current Status Card */}
-          <div className="lg:col-span-5">
-            <div className="p-6 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/[0.08] bg-[#0b0e14]/90 backdrop-blur-xl space-y-5 shadow-xl">
-              <div className="flex items-center gap-2.5 pb-4 border-b border-white/[0.06]">
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#10b981]" />
-                <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold">
-                  Current Status
+              {/* Verified Senior Badge overlay */}
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-6 px-4 py-2 rounded-full border border-white/15 bg-[#0b0e14]/90 backdrop-blur-xl shadow-2xl flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#10b981]" />
+                <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-200 font-semibold">
+                  Available for Hire
                 </span>
               </div>
+            </motion.div>
+          </div>
 
-              <div className="space-y-3.5">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                  <div className="flex flex-col">
-                    <span className="text-xs font-mono text-white font-medium uppercase tracking-wider">
-                      Open to Opportunities
-                    </span>
-                    <span className="text-xs text-neutral-400 font-sans mt-0.5 font-light">
-                      Frontend, Full-Stack, UI Engineer & Systems roles
-                    </span>
-                  </div>
-                </div>
+          {/* Statement & Current Status */}
+          <div className="lg:col-span-7 space-y-6">
+            <div className="space-y-4 text-neutral-300 font-sans text-sm sm:text-base leading-relaxed font-light">
+              <p className="text-xl sm:text-2xl font-normal text-white leading-snug">
+                I am a software engineer dedicated to building software where mechanical systems reliability meets high-precision interface design.
+              </p>
+              <p className="text-neutral-400">
+                My work spans from designing low-latency routing gateways and WebSocket market data streams in Go to building multimodal vision-language AI assistants with Next.js and FastAPI, high-throughput trading terminals, and interactive 3D product experiences in React, TypeScript, and Three.js.
+              </p>
+              <p className="text-neutral-400">
+                I care deeply about software fundamentals: clean API contracts, predictable state machines, fast bundle execution, and interfaces that feel effortless to touch and use on any screen size.
+              </p>
+            </div>
 
-                <div className="flex items-start gap-3">
-                  <Globe className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-                  <div className="flex flex-col">
-                    <span className="text-xs font-mono text-white font-medium uppercase tracking-wider">
-                      Work Modes
-                    </span>
-                    <span className="text-xs text-neutral-400 font-sans mt-0.5 font-light">
-                      Remote worldwide or onsite with relocation
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <div className="flex flex-col">
-                    <span className="text-xs font-mono text-white font-medium uppercase tracking-wider">
-                      Location
-                    </span>
-                    <span className="text-xs text-neutral-400 font-sans mt-0.5 font-light">
-                      Abuja, Nigeria · Willing to relocate
-                    </span>
-                  </div>
+            {/* Quick Status Pill Bar */}
+            <div className="p-5 rounded-2xl border border-white/[0.08] bg-[#0b0e14]/80 backdrop-blur-xl grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="flex items-center gap-3">
+                <CheckCircle className="w-4 h-4 text-cyan-400 shrink-0" />
+                <div className="flex flex-col">
+                  <span className="text-[11px] font-mono text-white font-medium uppercase tracking-wider">
+                    Opportunities
+                  </span>
+                  <span className="text-xs text-neutral-400 font-sans font-light">
+                    Frontend & Systems
+                  </span>
                 </div>
               </div>
 
-              <div className="pt-2">
-                <a
-                  href="#contact"
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.1] text-xs font-mono text-white uppercase tracking-wider transition-all duration-200 active:scale-95 min-h-[44px]"
-                >
-                  Initiate Discussion
-                </a>
+              <div className="flex items-center gap-3">
+                <Globe className="w-4 h-4 text-blue-400 shrink-0" />
+                <div className="flex flex-col">
+                  <span className="text-[11px] font-mono text-white font-medium uppercase tracking-wider">
+                    Work Modes
+                  </span>
+                  <span className="text-xs text-neutral-400 font-sans font-light">
+                    Remote or Relocation
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-emerald-400 shrink-0" />
+                <div className="flex flex-col">
+                  <span className="text-[11px] font-mono text-white font-medium uppercase tracking-wider">
+                    Location
+                  </span>
+                  <span className="text-xs text-neutral-400 font-sans font-light">
+                    Abuja, Nigeria
+                  </span>
+                </div>
               </div>
             </div>
           </div>

@@ -63,8 +63,8 @@ export const TechSculpture = ({ mouse }: TechSculptureProps) => {
 
       // Subtle organic floating motion
       const floatY = Math.sin(t * 0.8) * 0.05
-      const targetX = isMobile ? 0 : 1.5
-      const targetY = isMobile ? -0.1 : 0
+      const targetX = isMobile ? 0 : 1.3
+      const targetY = isMobile ? -0.05 : 0
       groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, targetX, delta * 3.0)
       groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, targetY + floatY, delta * 3.0)
     }

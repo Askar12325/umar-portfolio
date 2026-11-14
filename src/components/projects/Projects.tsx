@@ -2,12 +2,18 @@ import { motion } from 'framer-motion'
 import { ExternalLink, Terminal, Activity, Headphones, UtensilsCrossed } from 'lucide-react'
 import { GithubIcon } from '../ui/Icons'
 
+import chopsnapPreview from '../../assets/chopsnap-preview.jpg'
+import nexusllmPreview from '../../assets/nexusllm-preview.jpg'
+import apextradePreview from '../../assets/apextrade-preview.jpg'
+import auraPreview from '../../assets/aura-preview.jpg'
+
 interface Project {
   id: string
   title: string
   category: string
   description: string
   metrics?: string
+  image: string
   tags: string[]
   liveUrl: string
   githubUrl: string
@@ -27,6 +33,7 @@ const projects: Project[] = [
     description:
       'AI kitchen assistant tackling domestic food waste. Captures ingredients via photo or voice, validates provisions with instant user correction, and synthesizes Nigerian recipes across quick-cook vs formal meal tiers and budget thresholds.',
     metrics: 'Meta AI Hackathon 2026 · Sub-2s Synthesis',
+    image: chopsnapPreview,
     tags: ['Next.js 15', 'FastAPI', 'Python', 'Meta Muse Spark Open', 'VLM', 'Tailwind CSS'],
     liveUrl: 'https://chop-snap-ro2x.vercel.app/',
     githubUrl: 'https://github.com/Askar12325/ChopSnap',
@@ -44,6 +51,7 @@ const projects: Project[] = [
     description:
       'High-throughput distributed LLM gateway engineered in Go. Features sub-millisecond semantic caching, token bucket rate limiting, and automated multi-provider fallback orchestration across OpenAI, Anthropic, and local models.',
     metrics: '<0.8ms Overhead · 99.99% Uptime',
+    image: nexusllmPreview,
     tags: ['Go', 'Distributed Systems', 'Redis', 'Docker', 'Rate Limiting', 'gRPC'],
     liveUrl: 'https://nexus-llm.onrender.com/',
     githubUrl: 'https://github.com/Askar12325/Nexus-LLM',
@@ -61,6 +69,7 @@ const projects: Project[] = [
     description:
       'Institutional-grade crypto spot and derivatives trading terminal. Integrates high-frequency WebSocket streams, real-time orderbook depth visualization with zero UI hitching, and responsive lightweight charting.',
     metrics: '50ms Orderbook Feed · 60 FPS Canvas',
+    image: apextradePreview,
     tags: ['React', 'TypeScript', 'WebSockets', 'Tailwind CSS', 'State Machines', 'Canvas'],
     liveUrl: 'https://apextrade-mwrg.onrender.com',
     githubUrl: 'https://github.com/Askar12325/Apextrade',
@@ -78,6 +87,7 @@ const projects: Project[] = [
     description:
       'Luxury interactive 3D product showcase for next-generation spatial audio hardware. Features real-time WebGL rendering, scroll-driven exploded assembly visualization, and dynamic Spatial, Stereo, and ANC acoustic modes.',
     metrics: 'PBR Shaders · WebGL Hardware Accel',
+    image: auraPreview,
     tags: ['Three.js', 'React Three Fiber', 'GLTF / PBR', 'Framer Motion', 'Tailwind CSS'],
     liveUrl: 'https://aura-headset-gamma.vercel.app/',
     githubUrl: 'https://github.com/Askar12325/aura-spatial',
@@ -131,7 +141,7 @@ export const Projects = () => {
 
               <div className="relative z-10">
                 {/* Header Lockup: Category & Visual Icon */}
-                <div className="flex items-center justify-between gap-4 mb-6">
+                <div className="flex items-center justify-between gap-4 mb-4">
                   <span
                     className={`inline-block px-3 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase border font-semibold ${project.theme.badgeBg}`}
                   >
@@ -144,6 +154,19 @@ export const Projects = () => {
                     {project.id === 'apextrade' && <Activity className="w-4 h-4 text-emerald-400" />}
                     {project.id === 'aura' && <Headphones className="w-4 h-4 text-cyan-400" />}
                   </div>
+                </div>
+
+                {/* Screenshot Visual Showcase Frame */}
+                <div className="relative w-full h-48 sm:h-56 md:h-60 rounded-xl sm:rounded-2xl overflow-hidden mb-6 border border-white/[0.08] bg-black/40 group-hover:border-white/20 transition-all duration-300">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} live interface preview`}
+                    className="w-full h-full object-cover object-top filter brightness-[0.88] contrast-[1.05] group-hover:brightness-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                    loading="lazy"
+                  />
+                  {/* Subtle glass vignette & shine line */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b0d12] via-transparent to-black/20 pointer-events-none" />
+                  <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
                 </div>
 
                 {/* Title & Metrics */}
